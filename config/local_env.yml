@@ -1,1 +1,1 @@
-ZENDESK_API_URL: 'https://landonkoo.zendesk.com/api/v2/tickets.json'
+ZENDESK_API_URL: 'https://landonkoo.zendesk.com/api/v2'
