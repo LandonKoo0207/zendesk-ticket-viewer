@@ -1,0 +1,5 @@
+<h1>Zendesk Ticket Viewer</h1>
+
+<% @tickets.tickets.each do |ticket| %>
+  <%= ticket.subject %> <%= ticket.created_at.in_time_zone("Melbourne") %> <br>
+<% end %>
