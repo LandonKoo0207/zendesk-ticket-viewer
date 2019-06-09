@@ -1,0 +1,7 @@
+<h1>Zendesk Ticket Viewer</h1>
+
+Requester: <%= @requester.user.name %>
+<h2> <%= @ticket.subject %> </h2>
+<%= @ticket.description %>
+<br><br>
+<%= link_to 'Back to All Tickets', root_path %>
