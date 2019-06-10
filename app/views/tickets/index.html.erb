@@ -1,20 +1,24 @@
 <h1>Zendesk Ticket Viewer</h1>
 
-<% @tickets.each do |ticket| %>
-  <table>
-  <tr>
-    <td witdh="50px">
-      <%= ticket.status.capitalize %>
-    </td>
-    <td width="300px">
-      <%= link_to ticket.subject, ticket_path(ticket.id) %> 
-    </td>
-    <td width="150px">
-      <%= ticket.created_at.in_time_zone("Melbourne").strftime('%d %b %Y, %I:%M %p') %>
-    </td>
-  </tr>
-  </table>
-<% end %>
-<% (1..@page_count).each do |page| %>
-  <%= link_to page, tickets_path(page: page) %>
+<% if @tickets.empty? %>
+  There is no tickets.
+<% else %>
+  <% @tickets.each do |ticket| %>
+    <table>
+    <tr>
+      <td witdh="100px">
+        <%= ticket.status.capitalize %>
+      </td>
+      <td width="500px">
+        <%= link_to ticket.subject, ticket_path(ticket.id) %> 
+      </td>
+      <td width="200px">
+        <%= ticket.created_at.in_time_zone("Melbourne").strftime('%d %b %Y, %I:%M %p') %>
+      </td>
+    </tr>
+    </table>
+  <% end %>
+  <% (1..@page_count).each do |page| %>
+    <%= link_to page, tickets_path(page: page) %>
+  <% end %>
 <% end %>
