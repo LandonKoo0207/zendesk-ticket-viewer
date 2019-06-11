@@ -2,6 +2,8 @@
 
 Requester: <%= @requester.user.name %>
 <h2> <%= @ticket.subject %> </h2>
-<%= @ticket.description %>
+<div style="white-space: pre-line">
+  <%= @ticket.description %>
+</div>
 <br><br>
 <%= link_to 'Back to All Tickets', root_path %>
