@@ -9,5 +9,6 @@ class TicketsController < ApplicationController
   def show
     @ticket = Ticket.find(params[:id]).ticket
     @requester = User.find(@ticket.requester_id)
+    @asignee = User.find(@ticket.assignee_id)
   end
 end

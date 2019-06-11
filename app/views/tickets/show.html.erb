@@ -1,7 +1,46 @@
-Requester: <%= @requester.user.name %>
-<h2> <%= @ticket.subject %> </h2>
-<div style="white-space: pre-line">
-  <%= @ticket.description %>
+<div class="individual-whole-table">
+  <div class="row" id="ticket-number">
+    <div class="ticket-number">
+      Ticket #<%= @ticket.id %> 
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="individual-ticket-header">
+      Requester 
+    </div>
+    <div class="ticket-contents">
+      <%= @requester.user.name %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="individual-ticket-header">
+      Assignee 
+    </div>
+    <div class="ticket-contents">
+      <%= @asignee.user.name %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="individual-ticket-header">
+      Subject
+    </div>
+    <div class="ticket-contents">
+      <%= @ticket.subject %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="individual-description-header">
+      Description
+    </div>
+    <div class="individual-description-contents">
+      <%= @ticket.description %>
+    </div>
+  </div>
 </div>
-<br><br>
-<%= link_to 'Back to All Tickets', root_path %>
+<div class="row" id="back-to-all">
+  <%= link_to 'Back to All Tickets', root_path %>
+</div>
