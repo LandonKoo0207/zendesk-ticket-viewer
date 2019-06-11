@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
   def error_response(error)
     redirect_to errors_path(code: error.status)
   end
+
+  def route_not_found
+    redirect_to errors_path(code: 'routing_error')
+  end
 end

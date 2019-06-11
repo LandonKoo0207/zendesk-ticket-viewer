@@ -7,11 +7,13 @@ class ErrorsController < ApplicationController
   def error_page(error_code)
     case error_code
     when "200"
-      'invalid_response'
+      "invalid_response"
     when "401"
-      'could_not_authenticate'
+      "could_not_authenticate"
     when "404"
-      'not_found'
+      "not_found"
+    when "routing_error"
+      "routing_error"
     else
       'unknown_error'
     end

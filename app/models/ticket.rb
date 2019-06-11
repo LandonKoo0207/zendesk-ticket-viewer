@@ -5,6 +5,10 @@ class Ticket < Flexirest::Base
                                          sort_by: 'id', sort_order: 'desc' }
   get :find, '/tickets/:id.json'
 
+  def self.total_ticket_count
+    self.all.count
+  end
+
   def self.page_count
     (self.all.count.to_f / TICKETS_PER_PAGE).ceil
   end
