@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+
   def index
     @tickets = Ticket.all(page: params[:page]).tickets
     @page_count = Ticket.page_count
