@@ -12,6 +12,8 @@ class ErrorsController < ApplicationController
       'could_not_authenticate'
     when "404"
       'not_found'
+    else
+      'unknown_error'
     end
   end
 end
