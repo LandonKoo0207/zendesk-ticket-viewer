@@ -1,10 +1,8 @@
 # Zendesk Ticket Viewer  
 
-  
-
 ## Prerequisites
-Ruby 2.6.1 needs to be installed before installing this application.
-
+Ruby 2.6.1 needs to be installed before installing this application.  
+<br>
 ## Installation instructions
 
 Open the terminal, and clone this repository:
@@ -37,6 +35,8 @@ file, and open the file in the text editor
 </i>)
 
 
+## How to run the application
+
 Once you have sorted the master.key file, open your terminal app and
 
 Go to the root directory (zendesk-ticket-viewer) then run:
@@ -50,7 +50,6 @@ to run the development server.
 Open your web browser, enter localhost:3000 in the address window of the browser.
 
 Now you can try out and test the application!  
-
 
 ## How to run tests within the application
 
