@@ -6,7 +6,7 @@ RSpec.feature 'Handle basic errors' do
       visit '/tickets/202'
       expect(page).to have_content("Oops! Something's not right...")
       expect(page).to have_content("Not Found")
-      expect(page).to have_content("The URL of the API is invalid. Please make sure the API URL is correct, restart the application and try again.")
+      expect(page).to have_content("The URL of the API appears to be invalid.")
     end
   end
 
