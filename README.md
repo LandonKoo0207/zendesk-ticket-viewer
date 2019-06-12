@@ -113,5 +113,6 @@ I have used the credentials feature of Rails, which was first introduce in Rails
 
 This is far much more secure than simply storing it in Rails environmental variables, as those environment variables are merely plain text. This is why I chose Rails' new credential feature over conventional environment variables. 
 
+The actual credential data is encrypted in a separate file, and this credential is reference in config/initializers/flexirest.rb. 
 
       
